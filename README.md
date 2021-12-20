@@ -1,5 +1,5 @@
 # Video-Encoder-Bot
- a telegram bot for compressing/encoding videos in h264 format.
+ A telegram bot for compressing/encoding videos in h264 format.
 
 ### Configuration
 Add values in environment variables or add them in [config.env.example](/VideoEncoder/config.env.example) and rename file to `config.env`.
