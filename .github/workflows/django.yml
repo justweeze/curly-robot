@@ -23,6 +23,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       run: |
+        wget https://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2
+        tar ffmpeg-snapshot.tar.bz2
         pip install ffprobe-python
         mkdir ffprobe
         python -m pip install --upgrade pip
