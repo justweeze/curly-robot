@@ -15,7 +15,8 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from pyrogram import Client, filters
-
+import sys
+sys.path.append('/path/to/ffmpeg')
 from .. import data
 from ..utils.tasks import handle_task
 from ..utils.utils import check_user
