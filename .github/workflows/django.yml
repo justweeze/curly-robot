@@ -23,9 +23,10 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       run: |
-        wget https://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2
-        tar ffmpeg-snapshot.tar.bz2
-        pip install ffprobe-python
+        pkg install git -y
+        git clone https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
+        cd heroku-buildpack-latest/bin
+        bash compile
         mkdir ffprobe
         python -m pip install --upgrade pip
         pip install -r requirements.txt
